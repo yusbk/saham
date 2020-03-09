@@ -1,0 +1,2 @@
+# saham
+Oslo Børs 
