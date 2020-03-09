@@ -1,0 +1,1 @@
+body > div:nth-child(4) > ui-view > div > ui-view > div:nth-child(4) > div > ui-view > div > quotes > table
