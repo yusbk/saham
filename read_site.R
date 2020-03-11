@@ -14,7 +14,7 @@ sapply(pkgs, require, character.only = TRUE)
 
 ## Check if website can be extracted
 ## If it's TRUE then it's extractable
-robotstxt::paths_allowed(paths = c("https://www.oslobors.no/markedsaktivitet/#/list/shares/quotelist/ob"))
+robotstxt::paths_allowed(paths = c("https://www.oslobors.no/markedsaktivitet/#/list/shares/quotelist/ob/all/all/false"))
 
 ## Download the site
 
@@ -56,7 +56,7 @@ oslpath <-
 
 sosl <- xml2::read_html(oslHTML)
 
-html_nodes(sosl, xpath = oslpath)
+html_nodes(saham, xpath = oslpath)
 
 tbl <- XML::readHTMLTable(oslHTML2)
 
@@ -64,6 +64,26 @@ oslHTML %>%
   read_html() %>%
   html_nodes(xpath='//*[@data-reacid=".d"]/table') %>%
   html_table(fill = TRUE)
+
+
+
+#### Cobaan 2
+css2020 <- "table.table td.ITEM_SECTOR a"
+csstbl <- "table.table.table-striped.stock-list-development"
+css20 <- "table.table tr td:nth-child(5)"
+xpTall <- "/html/body/div[2]/ui-view/div/ui-view/div[4]/div/ui-view/div/quotes/table/tbody/tr[1]/td[7]"
+xpTall2 <- "/html/body/div[2]/ui-view/div/ui-view/div[4]"
+
+
+html_nodes(saham, css20)
+html_nodes(sosl, "tbody")
+
+html_nodes(saham, xpath = xpTall)
+html_nodes(saham, xpath = xpTall2)
+
+XML::readHTMLTable(sosl)
+
+html_nodes(sosl, "body > div:nth-child(4) > ui-view > div > ui-view > div:nth-child(4) > div > ui-view > div > quotes > table > tbody > tr:nth-child(1) > td.ITEM_SECTOR > a")
 
 
 ## From Investor.no
