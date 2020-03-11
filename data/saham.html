@@ -1,0 +1,692 @@
+<!DOCTYPE html><html ng-app="obApp" ng-controller="RootCtrl" class="ng-scope"><head><link rel="stylesheet" href="https://www.oslobors.no/markedsaktivitet/scripts/shims/styles/shim-ext.css"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+        <!-- ngIf: !pageTitle -->
+        <!-- ngIf: pageTitle --><title ng-if="pageTitle" class="ng-binding ng-scope">Aksjer</title><!-- end ngIf: pageTitle -->
+
+        
+            
+            
+
+    
+    
+    
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <meta http-equiv="Content-language" content="no-bokmaal">
+
+    
+        <meta name="author" content="Oslo Børs">
+
+        <meta name="copyright" content="Oslo Børs">
+
+        <meta name="description" content="Oslo Børs tilbyr handel i egenkapitalinstrumenter, derivater og renteprodukter">
+
+        <meta name="keywords" content="handel, aksjer, obligasjoner, fond, derivater, warrants">
+
+    
+    <meta name="generator" content="eZ Publish">
+    
+<link rel="Home" href="/" title="Oslo Børs forside">
+<link rel="Index" href="/">
+<link rel="Top" href="/" title="Kurser og marked / Oslo Børs / Home - Oslo Børs">
+<link rel="Search" href="/content/advancedsearch" title="Søk Oslo Børs">
+<link rel="Shortcut icon" href="/extension/oslobors/design/osloborsblue_redesign/images/new_favicon.png" type="image/x-icon">
+<link rel="Copyright" href="/ezinfo/copyright">
+<link rel="Author" href="/ezinfo/about">
+<link rel="Alternate" type="application/rss+xml" title="RSS" href="/rss/feed/my_feed"><link rel="Alternate" href="/layout/set/print/oms/layout/1/90/(oms)/1" media="print" title="Utskriftsversjon">
+
+
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        
+        
+        
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/extension/oslobors/design/osloborsblue_redesign/stylesheets/style-header-footer.css">
+
+<link rel="stylesheet" href="/extension/oslobors/design/osloborsblue_redesign/stylesheets/jy.css">
+<link rel="stylesheet" href="/extension/oslobors/design/standard/stylesheets/alphabet_list.css">
+
+<link rel="stylesheet" type="text/css" href="/extension/ezwebin/design/ezwebin/stylesheets/print.css" media="print">
+
+<link rel="stylesheet" type="text/css" href="/extension/ezwt/design/standard/stylesheets/websitetoolbar.css" media="all">
+    
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="/extension/oslobors/design/osloborsblue_redesign/javascript/libs/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript" src="/extension/oslobors/design/osloborsblue_redesign/javascript/libs/jquery.collapse.js"></script>
+<script type="text/javascript" src="/extension/oslobors/design/osloborsblue_redesign/javascript/libs/highstock.js"></script>
+<script type="text/javascript" src="/extension/oslobors/design/osloborsblue_redesign/javascript/libs/jquery.bxslider.min.js"></script>
+<script src="/extension/oslobors/design/osloborsblue_redesign/javascript/script.js" type="text/javascript"></script>
+<script src="/extension/oslobors/design/osloborsblue_redesign/javascript/ob_common.js" type="text/javascript"></script>
+<script src="/extension/oslobors/design/osloborsblue_redesign/javascript/jy.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+        <link rel="stylesheet" href="assets/css/cf11eb61.main.css">
+
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="table/shares_list_quotelist" src="scripts/react/table/shares_list_quotelist.js"></script></head>
+    <body>
+
+
+            
+            
+            
+    
+  
+  <header id="ob-header" mm="">
+  
+  <section id="ob-header-controls">
+	<div id="ob-logo">
+    <a class="logo-desktop" href="/"><img src="/design/osloborsblue_redesign/images/OB_All-White_RGB_Croped.png" width="250px" alt=""></a>
+    <a class="logo-mobile" href="/"><img src="/extension/oslobors/design/osloborsblue_redesign/images/oslobors_mobil.svg" width="140px" alt=""></a>
+    <a class="logo-xs" href="/"><img src="/extension/oslobors/design/osloborsblue_redesign/images/oslobors_mobil.svg" width="115px" alt=""></a>
+  </div>  <nav id="ob-header-nav">
+                                      
+            <a href="/ob_eng/markedsaktivitet/#/list/shares/quotelist/ob/all/all/false" title="English language" id="link_language_text" class="ob-header-nav__language hidden-xs">
+              <i class="fa fa-globe"></i>
+      <span class="ob-header-nav__item">English</span>
+    </a>
+      
+    
+              <a href="/markedsaktivitet/#/user/portfolios" title="Min side" class="ob-header-nav__login-open hidden-xs">
+      <i class="fa fa-user"></i>
+      <span class="ob-header-nav__item">Min side</span>
+    </a>
+    
+    
+    
+        <script language="javascript" type="text/javascript">
+            var search_text_info = "Søk";
+    </script>
+    <form class="header_search_form header_search_updated ng-pristine ng-valid" action="/oms/search" accept-charset="UTF-8" onsubmit="var txt = document.getElementById('mainsearch'); txt.value = txt.value.trim(); return ( (  txt.value.length &gt; 2 ) &amp;&amp; ( txt.value != txt.placeholder ) ) ;" novalidate="novalidate">
+        <div class="input-group">
+            <input name="param" type="hidden" value="1">
+            <input type="text" class="form-control placeholder" id="mainsearch" placeholder="Søk..." name="SearchText" required="required" title="Søk etter selskap, ticker, ISIN eller annen tekst" aria-required="true">
+            <button type="submit" value="" class="action"><i class="fa fa-search search_icon" aria-hidden="true"></i></button>
+                    </div>
+    </form>
+    
+
+
+    <a href="#" class="ob-header-nav__menu-open">
+      <i class="fa fa-bars"></i>
+      <span class="ob-header-nav__item">Meny</span>
+    </a>
+  </nav>
+</section>
+<aside id="ob-header-menu"><!-- header-menu -->
+  <div class="ob-header-menu-wrap">
+                          <!-- Top menu area: START -->
+<!-- Top menu content: START -->
+
+
+            		 
+                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    		<ul class="ob-header-menu__list">
+                				
+				                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                    
+                                                                
+                    
+                                                                                    
+                                            <li>
+							<div class="ob-header-menu__item">
+							<a class="active" href="/markedsaktivitet/#/" title="">Kurser og marked</a>
+							<span class="ob-header-menu__open"></span>
+							</div>
+
+			    				<ul style="display: none;">
+				    				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/shares/quotelist/ob/all/false">Aksjer</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/shares/quotelist/ob/PCC/false">Egenkapitalbevis</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/shareindices/quotelist/intraday">Aksjeindekser</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/bondindices/quotelist/intraday">Obligasjonsindekser</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/bonds/quotelist/ob/all/false?page=1&amp;ascending=true&amp;sort=ITEM_SECTOR">Obligasjoner</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/subscriptions/quotelist/false">Tegningsretter</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/etps/quotelist/etps/false/all/all/all">ETP-er</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/derivatives/quotelist/false">Derivater</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/warrants/quotelist/all/false">Warrants</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/funds?page=1&amp;ascending=true&amp;sort=SECURITYNAME">Fond</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/apa">APA-handler</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/list/isin?type=all&amp;page=1&amp;ascending=asc&amp;sort=column&amp;items=all">Alle ISIN</a></li>
+				    										    											    					
+				        <li><a href="/markedsaktivitet/#/calendar">Finanskalender</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                
+                    
+                    
+                    
+                                        
+                                            <li>
+			    <div class="ob-header-menu__item">
+				<a class="" href="/Oslo-Boers/Notering">Notering</a>
+				<span class="ob-header-menu__open"></span>
+			    </div>
+			    				<ul style="display: none;">
+				    				        <li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer">Aksjer, egenkapitalbevis og retter til aksjer</a></li>
+				    				        <li><a href="/Oslo-Boers/Notering/Renteprodukter">Renteprodukter</a></li>
+				    				        <li><a href="/Oslo-Boers/Notering/ETP-er-warrants-og-strukturerte-produkter">ETP-er, warrants og strukturerte produkter</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                    
+                    
+                    
+                                        
+                                            <li>
+			    <div class="ob-header-menu__item">
+				<a class="" href="/Oslo-Boers/Handel">Handel</a>
+				<span class="ob-header-menu__open"></span>
+			    </div>
+			    				<ul style="display: none;">
+				    				        <li><a href="/Oslo-Boers/Handel/Medlemskap">Medlemskap</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Markedsovervaaking">Markedsovervåking</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Instrumenter">Instrumenter</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Market-making">Market making</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Order-to-trade-ratio">Order-to-trade ratio</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Oslo-Boers-APA">Oslo Børs APA</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Clearing">Clearing</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Handelssystemer">Handelssystemer</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Delta">Delta</a></li>
+				    				        <li><a href="/Oslo-Boers/Handel/Priser-og-avgifter">Priser og avgifter</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                                                                                                                                                                                
+                    
+                    
+                    
+                                        
+                                            <li>
+			    <div class="ob-header-menu__item">
+				<a class="" href="/Oslo-Boers/Produkter-og-tjenester">Produkter og tjenester</a>
+				<span class="ob-header-menu__open"></span>
+			    </div>
+			    				<ul style="display: none;">
+				    				        <li><a href="/Oslo-Boers/Produkter-og-tjenester/Markedsdata">Markedsdata</a></li>
+				    				        <li><a href="/Oslo-Boers/Produkter-og-tjenester/SMS-tjenester">SMS-tjenester</a></li>
+				    				        <li><a href="/Oslo-Boers/Produkter-og-tjenester/Publikasjoner">Publikasjoner</a></li>
+				    				        <li><a href="/Oslo-Boers/Produkter-og-tjenester/Kurs-og-seminarer">Kurs og seminarer</a></li>
+				    				        <li><a href="/Oslo-Boers/Produkter-og-tjenester/Utstederprodukter">Utstederprodukter</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                                        
+                                            <li>
+			    <div class="ob-header-menu__item">
+				<a class="" href="/Oslo-Boers/Regelverk">Regelverk</a>
+				<span class="ob-header-menu__open"></span>
+			    </div>
+			    				<ul style="display: none;">
+				    				        <li><a href="/Oslo-Boers/Regelverk/Lover-og-forskrifter">Lover og forskrifter</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Regler-for-utstedere">Regler for utstedere</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Medlems-og-handelsregler">Medlems- og handelsregler</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Boerssirkulaerer-arkiv">Børssirkulærer - arkiv</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Hoeringer">Høringer</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Vedtak-og-uttalelser">Vedtak og uttalelser</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Derivatreglene">Derivatreglene</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Connectreglene">Connectreglene</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Overtagelsestilbud">Overtagelsestilbud</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Boersklagenemnden">Børsklagenemnden</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Direktiver-og-forordninger">Direktiver og forordninger</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Merkur-Market-klagenemnd">Merkur Market klagenemnd</a></li>
+				    				        <li><a href="/Oslo-Boers/Regelverk/Informasjon-og-nyheter">Informasjon og nyheter</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                    
+                    
+                    
+                                        
+                                            <li>
+			    <div class="ob-header-menu__item">
+				<a class="" href="/Oslo-Boers/Statistikk">Statistikk</a>
+				<span class="ob-header-menu__open"></span>
+			    </div>
+			    				<ul style="display: none;">
+				    				        <li><a href="/Oslo-Boers/Statistikk/Meglerstatistikk">Meglerstatistikk</a></li>
+				    				        <li><a href="/Oslo-Boers/Statistikk/Maanedsstatistikk">Månedsstatistikk</a></li>
+				    				        <li><a href="/Oslo-Boers/Statistikk/AArsstatistikk">Årsstatistikk</a></li>
+				    				        <li><a href="/Oslo-Boers/Statistikk/Fakta-og-noekkeltall">Fakta og nøkkeltall</a></li>
+				    				        <li><a href="/Oslo-Boers/Statistikk/TM-derivater-og-OTC-statistikk">TM-derivater og OTC-statistikk</a></li>
+				    				        <li><a href="/Oslo-Boers/Statistikk/Best-execution">Best execution</a></li>
+				    				        <li><a href="/Oslo-Boers/Statistikk/Nyhetsbrev">Nyhetsbrev</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                    
+                    
+                    
+                                        
+                                            <li>
+			    <div class="ob-header-menu__item">
+				<a class="" href="/Oslo-Boers/Om-Oslo-Boers">Om Oslo Børs</a>
+				<span class="ob-header-menu__open"></span>
+			    </div>
+			    				<ul style="display: none;">
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Nyheter-fra-Oslo-Boers">Nyheter fra Oslo Børs</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Styret">Styret</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Ledergruppen">Ledergruppen</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Pressebilder">Pressebilder</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Minileksikon">Minileksikon</a></li>
+				    				        <li><a href="https://www.oslobors.no/jubileum">Børsens historie</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/FAQ">FAQ</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Ledige-stillinger">Ledige stillinger</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Etiske-retningslinjer">Etiske retningslinjer</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Samfunnsansvar">Samfunnsansvar</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/AApningstider">Åpningstider</a></li>
+				    				        <li><a href="/Oslo-Boers/Om-Oslo-Boers/Kontakt-oss">Kontakt oss</a></li>
+				    				</ul>
+			    			</li>
+                                        
+                				
+				                                                                                                                                                                                                                                                                                                                                                
+                    
+                    
+                                                                
+                                        
+                                            <li>
+                            <div class="ob-header-menu__item user_page">
+                                <a class="" href="/markedsaktivitet/#/user/portfolios">Min Side</a>
+				<span class="ob-header-menu__open" id="user_page_trigger"></span>
+                            </div>
+			    				<ul style="display: none;">
+				    				    										    											    				    				        <li><a href="/markedsaktivitet/#/user/portfolios">Fiktive porteføljer</a></li>
+				    										    											    				    				        <li><a href="/markedsaktivitet/#/user/alerts">Selskapsmeldinger</a></li>
+				    										    											    				    				        <li><a href="/user/edit/(index)/4">Nyhetsvarsler</a></li>
+				    										    											    				    				        <li><a href="/user/edit/(index)/1">Brukerprofil</a></li>
+				    				</ul>
+			                            </li>
+                                        
+                            </ul>
+            
+
+             
+     <!-- Top menu area: END -->
+      <ul class="ob-header-menu__list">
+      <li>
+        <div class="ob-header-menu__item">
+                                                            <a href="/ob_eng/markedsaktivitet/#/list/shares/quotelist/ob/all/all/false" title="English language" id="link_language_text_menu" class="ob-header-nav__language">
+                      
+            <span class="ob-header-nav__item">English</span>
+          </a>
+                            </div>
+      </li>
+    </ul>
+    
+      <ul class="ob-header-menu__list">
+    
+      <li id="user_links_logged_in" style="display: none;">
+              <div class="ob-header-menu__item">
+          <a href="/user/logout">Logg ut&nbsp;&nbsp;<span class="user-name" id="cookie_currentuser_name"></span></a>
+        </div>
+            </li>
+    
+      <li id="user_links_logged_out">
+              <div class="ob-header-menu__item"><a href="/user/login">Logg inn</a></div>
+            </li>
+    
+    </ul>
+    </div>
+</aside><!-- header-menu -->
+
+</header><!--end Header-->
+
+<script language="javascript" type="text/javascript">
+
+obSetUserStatus('is_logged_in', 'is_logged_in_user_name');
+
+</script>
+
+
+
+
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <div class="row">
+                <div class="large-12 columns">
+                    <nav class="breadcrumb ng-isolate-scope" role="navigation" aria-label="breadcrumbs" root-link="mainpage">
+    <p class="ng-binding">Du er her:
+       <!-- <a role="menuitem" ng-if="hasRootLink" class="rootLink" href="
+       {{}}//{{rootLink.url}}">{{rootLink.name | translate}}</a> -->
+       <!-- {{hasRootLink ? "/ " : ""}} -->
+
+        <!-- ngRepeat: state in $navigationState.currentState.data.path --><a ui-sref="market" ui-sref-opts="{reload: true}" role="menuitem" class="navpath ng-binding ng-scope" ng-repeat="state in $navigationState.currentState.data.path" href="#/">Kurser og marked</a><!-- end ngRepeat: state in $navigationState.currentState.data.path -->
+        <!-- ngIf: $navigationState.currentState.data.displayName --><a role="menuitem" class="current ng-binding ng-scope" ng-if="$navigationState.currentState.data.displayName">Aksjer</a><!-- end ngIf: $navigationState.currentState.data.displayName -->
+
+    </p>
+</nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- uiView: undefined --><ui-view class="ng-scope"><div class="large-12 columns ng-scope">
+    <div class="row">
+        <div class="large-12 columns" ng-show="$state.current.name != 'list.derivatives.connect'">
+            <h2 class="ng-binding">Aksjer</h2>
+        </div>
+    </div>
+    <!-- uiView: undefined --><ui-view class="ng-scope"><div class="row small-collapse ng-scope">
+    <div class="large-12">
+        <div class="large-2 columns">
+            <div class="invisible-panel">
+                <label for="marketSelect" class="ng-binding">Velg marked</label>
+                <select name="market" ng-change="paramsHolder.sector = 'all';paramsHolder.segment = 'all';$state.go($state.current.name, paramsHolder, {reload: true})" ng-model="paramsHolder.market" ng-options="market as marketLabels[market] for market in markets" class="ng-pristine ng-untouched ng-valid"><option value="0" selected="selected">Alle</option><option value="1">Oslo Børs</option><option value="2">Oslo Axess</option><option value="3">Merkur Market</option></select>
+            </div>
+        </div>
+        <div class="large-2 columns">
+            <div class="invisible-panel">
+                <label for="sectorSelect" class="ng-binding">Velg sektor</label>
+                <select name="sector" ng-change="paramsHolder.segment = 'all';$state.go($state.current.name, paramsHolder, {reload: true})" ng-model="paramsHolder.sector" ng-options="sector as sectorLabels[sector] for sector in sectors" class="ng-pristine ng-untouched ng-valid"><option value="0" selected="selected">Alle</option><option value="1">Egenkapitalbevis</option><option value="2">Energi</option><option value="3">Materialer</option><option value="4">Industri</option><option value="5">Forbruksvarer</option><option value="6">Konsumvarer</option><option value="7">Helsevern</option><option value="8">Finans</option><option value="9">IT</option><option value="10">Kommunikasjon</option><option value="11">Forsyning</option><option value="12">Eiendom</option></select>
+            </div>
+        </div>
+        <!-- ngIf: hasSegments --><div class="large-2 columns ng-scope" ng-if="hasSegments">
+            <div class="invisible-panel">
+                <label for="segmentSelect" class="ng-binding">Velg segment</label>
+                <select name="segment" id="segmentSelect" ng-change="$state.go($state.current.name, paramsHolder, {reload: true})" ng-model="paramsHolder.segment" ng-options="segment as segmentLabels[segment] | translate for segment in segments" class="ng-pristine ng-untouched ng-valid"><option value="0" selected="selected">Alle</option><option value="1">OBX</option><option value="2">OB Match</option><option value="3">OB Standard</option><option value="4">OB Nye</option></select>
+            </div>
+        </div><!-- end ngIf: hasSegments -->
+
+        <div class="large-12 show-for-medium show-for-small columns">
+            <!-- ngIf: legend != null -->
+        </div>
+        <div class="medium-12 columns large-6" ng-class="hasSegments ? 'large-6' : 'large-8'">
+            <div class="invisible-panel omslabel">
+                <div class="large-12 columns medium-12">
+                    <ul class="market_symbol_list">
+                        <!-- ngIf: $state.params.market !== 'oax' && $state.params.market !== 'merk' --><li ng-if="$state.params.market !== 'oax' &amp;&amp; $state.params.market !== 'merk'" class="ng-binding ng-scope">
+                            <div class="XOSL"></div>Aksjer notert på Oslo Børs
+                        </li><!-- end ngIf: $state.params.market !== 'oax' && $state.params.market !== 'merk' -->
+                        <!-- ngIf: $state.params.market !== 'ose' && $state.params.market !== 'merk' --><li ng-if="$state.params.market !== 'ose' &amp;&amp; $state.params.market !== 'merk'" class="ng-binding ng-scope">
+                            <div class="XOAS"></div>Aksjer notert på Oslo Axess
+                        </li><!-- end ngIf: $state.params.market !== 'ose' && $state.params.market !== 'merk' -->
+                        <!-- ngIf: $state.params.market !== 'ose' && $state.params.market !== 'oax' --><li ng-if="$state.params.market !== 'ose' &amp;&amp; $state.params.market !== 'oax'" class="ng-binding ng-scope">
+                            <div class="XMERK"></div>Aksjer tatt opp til handel på Merkur Market
+                        </li><!-- end ngIf: $state.params.market !== 'ose' && $state.params.market !== 'oax' -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row small-collapse ng-scope">
+    <div class="large-12 columns">
+        <!-- ngIf: legend != null -->
+    </div>
+</div>
+<!-- ngIf: $state.params.sector == 'PCC' -->
+<div class="row small-collapse ng-scope">
+    <div class="large-12 columns">
+        <div class="table-panel above-table">
+            <div class="tabs">
+                <nav role="navigation" class="transformer-tabs ng-isolate-scope" tabs="tabs" meta="tabMeta">
+    <ul>
+        <!-- ngRepeat: tab in tabs --><li data-ng-repeat="tab in tabs" class="ng-scope">
+            <a ui-sref="list.shares.quotelist($state.params)" ui-sref-opts="{reload: true}" ui-sref-active="active" class="ng-binding active" href="#/list/shares/quotelist/ob/all/all/false">Kursutvikling</a>
+        </li><!-- end ngRepeat: tab in tabs --><li data-ng-repeat="tab in tabs" class="ng-scope">
+            <a ui-sref="list.shares.return($state.params)" ui-sref-opts="{reload: true}" ui-sref-active="active" class="ng-binding" href="#/list/shares/return/ob/all/all/false">Avkastning</a>
+        </li><!-- end ngRepeat: tab in tabs -->
+    </ul>
+</nav>
+                <label class="small-margin-top ng-binding" for="traded">
+                    <input id="traded" ng-true-value="'true'" ng-false-value="'false'" ng-model="paramsHolder.traded" ng-change="$state.go($state.current.name, paramsHolder, {reload: true})" type="checkbox" class="ng-pristine ng-untouched ng-valid">
+                    Vis kun papirer som har vært omsatt i dag
+                </label>
+                <p class="row-counter ng-binding">Antall instrumenter: 249</p>
+            </div>
+        </div>
+        <!-- ngIf: $state.params.sector === 'PCC' && $state.params.market === 'oax' -->
+    </div>
+</div>
+<div class="row small-collapse ng-scope">
+    <div class="large-12 columns">
+        <!-- uiView: undefined --><ui-view class="ng-scope"><div class="ng-scope">
+    <quotes config="quotelist" class="quote-list ng-isolate-scope"></quotes>
+    <!-- ngIf: $state.params.segment === 'new' && empty -->
+</div>
+</ui-view></div>
+</div>
+
+<div class="row small-collapse ng-scope">
+    <div class="large-4 columns show-for-medium-down">
+        <div class="table-panel">
+            <h3 class="ng-binding">Nyttige lenker</h3>
+                
+                
+                <p><a href="http://www.sparebankforeningen.no/egenkapitalbevis/" target="_blank" class="chevron"><i class="fa fa-link"></i>&nbsp;Om egenkapitalbevis (Sparebankforeningen)</a></p><p><a href="http://www.oslobors.no/markedsaktivitet/#/calendar" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Finanskalender</a></p><p><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Eierstyring-og-selskapsledelse" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Eierstyring og selskapsledelse</a></p><p><a href="/Oslo-Boers/Handel/Markedsovervaaking/Primaerinnsiderregister" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Innsideregister</a></p><p><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Listestruktur-og-likviditetsinndeling" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Om listestruktur</a></p><p><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Notering av aksjer og egenkapitalbevis</a></p><p><a href="/Oslo-Boers/Statistikk/Maanedsstatistikk" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Månedsstatistikk for aksjer</a></p><p><a href="/Oslo-Boers/Statistikk/AArsstatistikk" target="_self" class="chevron"><i class="fa fa-link"></i>&nbsp;Årsstatistikk for aksjer</a></p>
+        </div>
+    </div>
+</div>
+
+</ui-view></div>
+</ui-view>
+            </div>
+
+            <!-- IE9 does not support CSS3 animations, which this spinner uses -->
+            <!--[if !IE]><!-->
+                <div class="spinner-container ng-hide" ng-show="loadingSpinner">
+                    <div class="spinner">
+                      <div class="spinner-container container1">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                      </div>
+                      <div class="spinner-container container2">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                      </div>
+                      <div class="spinner-container container3">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                      </div>
+                    </div>
+                  </div>
+              <!--<![endif]-->
+
+            
+            
+            
+    <!-- Footer area: START -->	    <footer id="ob-footer">
+	    	<section class="container">
+                                                                                            <ul class="ob-footer-nav ob-content-section"><!-- footer-nav -->
+                                                        					        <li class="ob-footer-nav__item">
+            						<h4 class="ob-capt">
+For utstedere</h4>
+                                    
+
+<ul>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer" target="_self">Hvorfor bli notert</a></li>
+
+<li><a href="/Oslo-Boers/Handel/Priser-og-avgifter" target="_self">Priser og avgifter</a></li>
+
+<li><a href="/Oslo-Boers/Produkter-og-tjenester/Utstederprodukter/Oslo-Boers-Publication-Service" target="_self">Distribusjon av nyhetsmeldinger</a></li>
+
+<li><a href="/Oslo-Boers/Regelverk" target="_self">Lover og regler</a></li>
+
+<li><a href="/Oslo-Boers/Handel/Markedsovervaaking/Primaerinnsiderregister" target="_self">Primærinnsiderregister</a></li>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Eierstyring-og-selskapsledelse" target="_self">Eierstyring og selskapsledelse</a></li>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Oslo-Boers-IR-anbefaling" target="_self">Rapportering av IR-informasjon</a></li>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Retningslinjer-for-ESG-rapportering" target="_self">Rapportering av samfunnsansvar</a></li>
+
+</ul>
+            					</li>
+                                                        					        <li class="ob-footer-nav__item">
+            						<h4 class="ob-capt">
+For medlemmer</h4>
+                                    
+
+<ul>
+
+<li><a href="/Oslo-Boers/Handel/Medlemskap" target="_self">Medlemskap på Oslo Børs</a></li>
+
+<li><a href="/Oslo-Boers/Regelverk/Medlems-og-handelsregler" target="_self">Medlems- og handelsregler</a></li>
+
+<li><a href="/Oslo-Boers/Statistikk" target="_self">Statistikk</a></li>
+
+<li><a href="/Oslo-Boers/Handel/Markedsovervaaking" target="_self">Markedsovervåkning</a></li>
+
+<li><a href="/Oslo-Boers/Regelverk/Boerssirkulaerer-arkiv" target="_self">Børssirkulærer</a></li>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Listestruktur-og-likviditetsinndeling" target="_self">Listestruktur</a></li>
+
+<li><a href="/Oslo-Boers/Handel/Medlemskap/Medlemsinformasjon-fra-Oslo-Boers" target="_self">Medlemsinformasjon</a></li>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Oslo-Boers-og-Oslo-Axess/Noterte-selskapers-hjemstat" target="_self">Noterte selskapers hjemstat</a></li>
+
+</ul>
+            					</li>
+                                                        					        <li class="ob-footer-nav__item">
+            						<h4 class="ob-capt">
+For investorer</h4>
+                                    
+
+<ul>
+
+<li><a href="/Oslo-Boers/Handel" target="_self">Hvorfor handle på Oslo Børs</a></li>
+
+<li><a href="https://www.oslobors.no/markedsaktivitet/#/user/portfolios" target="_self">Min Side - fiktiv portefølje</a></li>
+
+<li><a href="http://www.newsweb.no" target="_blank">Børsmeldinger fra Newsweb</a></li>
+
+<li><a href="/Oslo-Boers/Handel/Medlemskap/Medlemsliste" target="_self">Medlemmer på Oslo Børs</a></li>
+
+<li><a href="/Oslo-Boers/Produkter-og-tjenester/Publikasjoner" target="_self">Aksjer for alle - enkel innføring</a></li>
+
+<li><a href="/Oslo-Boers/Statistikk/Fakta-og-noekkeltall" target="_self">Fakta og nøkkeltall</a></li>
+
+<li><a href="/Oslo-Boers/Notering/Aksjer-egenkapitalbevis-og-retter-til-aksjer/Nye-aksjenoteringer" target="_self">Nye aksjenoteringer</a></li>
+
+<li><a href="/Oslo-Boers/Produkter-og-tjenester/SMS-tjenester" target="_self">Aksjekurser på SMS</a></li>
+
+</ul>
+            					</li>
+                                                        					        <li class="ob-footer-nav__item">
+            						<h4 class="ob-capt">
+Konsernets nettsteder</h4>
+                                    
+
+<ul>
+
+<li><a href="https://www.euronext.com" target="_blank">Euronext</a></li>
+
+<li><a href="http://www.vps.no" target="_blank">VPS</a></li>
+
+<li><a href="https://oms.no/no/" target="_blank">Oslo Market Solutions</a></li>
+
+<li><a href="http://www.fishpool.eu" target="_blank">Fish Pool</a></li>
+
+<li><a href="https://centevo.se/" target="_blank">Centevo</a></li>
+
+<li><a href="https://newsweb.oslobors.no/" target="_blank">NewsWeb</a></li>
+
+</ul>
+            					</li>
+                                                        					        <li class="ob-footer-nav__item">
+            						<h4 class="ob-capt">
+Om oss</h4>
+                                    
+
+<ul>
+
+<li><a href="/Oslo-Boers/Om-Oslo-Boers/Nyheter-fra-Oslo-Boers" target="_self">Nyheter fra Oslo Børs</a></li>
+
+<li><a href="/Oslo-Boers/Om-Oslo-Boers/Styret" target="_self">Styret</a></li>
+
+<li><a href="/Oslo-Boers/Om-Oslo-Boers/Pressebilder" target="_self">Pressebilder</a></li>
+
+<li><a href="/Oslo-Boers/Om-Oslo-Boers/Ledige-stillinger" target="_self">Ledige stillinger</a></li>
+
+<li><a href="/Oslo-Boers/Om-Oslo-Boers/AApningstider" target="_self">Åpningstider</a></li>
+
+<li><a href="/Oslo-Boers/Om-Oslo-Boers/Kontakt-oss" target="_self">Kontakt oss</a></li>
+
+</ul>
+            					</li>
+                                                					        <li class="ob-footer-nav__item">
+        						
+<p>Kursdata er 15 minutter forsinket - levert av Oslo Børs, <a href="https://www.theice.com/market-data" target="_blank">ICE Data Services</a>&nbsp;og&nbsp;<a href="http://www.oslomarketsolutions.no/" target="_blank">Oslo Market Solutions</a>. Les om <a href="/Oslo-Boers/Om-Oslo-Boers/Ansvar-og-rettigheter" target="_self">ansvar og rettigheter</a>.</p><p>Les vår <a href="/Oslo-Boers/Om-Oslo-Boers/Personvernerklaering" target="_self">personvernerklæring og bruk av cookies</a>&nbsp;og våre <a href="/Oslo-Boers/Om-Oslo-Boers/Saarbarhetsrapportering" target="_self">retningslinjer for sårbarhetsrapportering</a>.</p>        					</li>
+                                            </ul><!-- footer-nav -->
+                                                       
+
+				
+			</section>
+			<section class="ob-footer-move-top">
+				<a href="#" class="ob-footer-move-top__link">Til toppen</a>
+			</section>
+	    </footer>
+<!-- Footer area: END -->
+        <script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6174100-1', 'auto');
+
+
+    
+
+</script>
+
+
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+        <script src="scripts/803c526f.vendor.js"></script>
+
+        <script type="text/javascript">
+            document.write('<script src="i18n/angular-locale_' + (window.location.href.indexOf('ob_eng') > -1 ? 'en' : 'no') + '.js"><\/script>');
+        </script><script src="i18n/angular-locale_no.js"></script>
+
+        <script src="scripts/7ad93390.scripts.js"></script>
+    
+</body></html>
